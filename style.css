@@ -1,0 +1,514 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital@1&family=Dancing+Script:wght@600&display=swap');
+
+
+:root{
+    --container-bg-color: #333;
+    --left-bg-color: rgba(92, 92, 92, 0.4);
+    --left-button-hover-color: rgba(161, 11, 11, 0.3);
+    --right-bg-color: rgba(43, 43, 43, 0.8);
+    --right-button-hover-color: rgba(92, 92, 92, 0.3);
+    --hover-width: 75%;
+    --other-width: 25%;
+    --speed: 1000ms;
+}
+
+html{
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Asap', sans-serif;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+h1{
+    font-size: 3.2rem;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+.button{
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    height: 3.5rem;
+    padding-top: 1.10rem;
+    width: 15rem;
+    text-align: center;
+    color: #fff;
+    border: #fff solid 0.2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    transform: translateX(-50%);
+    border-radius: 2rem;
+}
+
+.button1{
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    height: 3.5rem;
+    margin: 80px 0px;
+    padding-top: 1.10rem;
+    width: 15rem;
+    text-align: center;
+    color: #fff;
+    border: #fff solid 0.2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    transform: translateX(-50%);
+    border-radius: 2rem;
+}
+
+.button2{
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    height: 3.5rem;
+    margin: 124px 0px;
+    padding-top: 1.10rem;
+    width: 15rem;
+    text-align: center;
+    color: #fff;
+    border: #fff solid 0.2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    transform: translateX(-50%);
+    border-radius: 2rem;
+}
+
+.button3{
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    height: 3.5rem;
+    margin: 203px 0px;
+    padding-top: 1.10rem;
+    width: 15rem;
+    text-align: center;
+    color: #fff;
+    border: #fff solid 0.2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    transform: translateX(-50%);
+    border-radius: 2rem;
+}
+
+.split.left.button:hover {
+    background-color: var(--left-button-hover-color);
+    border-color: var(--left-button-hover-color);
+}
+
+.split.right.button:hover {
+    background-color: var(--right-button-hover-color);
+    border-color: var(--right-button-hover-color);
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: var(--container-bg-color);
+}
+
+.split{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.split.left{
+    left: 0;
+    background: url('image/logo_Friends.jpg') center center no-repeat;
+    background-size: cover;
+}
+
+.split.left::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: var(--left-bg-color);
+}
+
+.split.right{
+    right: 0;
+    background: url('image/fon.jpg') center center no-repeat;
+    background-size: cover;
+}
+
+.split.right::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: var(--right-bg-color);
+}
+
+.split.left, .split.right, .split.right::before, .split.left::before{
+    transition: var(--speed) all ease-in-out;
+}
+
+.hover-left .left{
+    width: var(--hover-width);
+}
+
+.hover-left .right{
+    width: var(--other-width);
+}
+
+.hover-left .right::before{
+    z-index: 2;
+}
+
+.hover-right .right{
+    width: var(--hover-width);
+}
+
+.hover-right .left{
+    width: var(--other-width);
+}
+
+.hover-right .left::before{
+    z-index: 2;
+}
+
+footer{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 50px 100px;
+    background: #111;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+footer .container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 10px;
+}
+
+footer .container .sec{
+    margin-right: 30px;
+}
+
+footer .container .sec.aboutus{
+    width: 40%;
+}
+
+footer .container  h2{
+    position: relative;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+footer .container  h2:before{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: #f00;
+}
+
+footer .container p{
+    color: #999 ;
+}
+
+.contactFriends{
+    position: relative;
+    width: 25%;
+}
+
+.contactFriends .information li{
+    display: flex;
+    margin-bottom: 16px;
+}
+
+.contactFriends .information li span:nth-child(1){
+    color: #fff;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.contactFriends .information li span{
+    color: #999;
+}
+
+.contactFriends .information li a{
+    color: #999;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: inline-block;
+    word-break: break-word;
+}
+
+.contactFriends .information li a:hover{
+    color:#f00 ;
+}
+
+.contactFriends .social{
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.contactFriends .social li{
+    list-style: none;
+}
+
+.contactFriends .social li a{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.contactFriends .social li a:hover{
+    background: #f00;
+}
+
+.contactFriends .social li a .fab, .fas {
+    color: #fff;
+    font-size: 20px;
+}
+
+.contactNacional{
+    width: calc(35% - 60px);
+    margin-right: 0 !important;
+}
+
+.contactNacional .info{
+    position: relative;
+}
+
+.contactNacional .info li{
+    display: flex;
+    margin-bottom: 16px;
+}
+
+.contactNacional .info li span:nth-child(1){
+    color: #fff;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.contactNacional .info li span{
+    color: #999 ;
+}
+
+.contactNacional .info li a{
+    color: #999;
+    text-decoration: none;
+    word-break: break-word;
+}
+
+.contactNacional .info li a:hover{
+    color: #f00;
+}
+
+.contactNacional .social{
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.contactNacional .social li{
+    list-style: none;
+}
+
+.contactNacional .social li a{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.contactNacional .social li a:hover{
+    background: #f00;
+}
+
+.contactNacional .social li a .fab, .fas {
+    color: #fff;
+    font-size: 20px;
+}
+
+.copyrightText{
+    width: 100%;
+    background: #181818;
+    padding: 8px 100px;
+    text-align: center;
+    color: #999;
+}
+
+@media only screen and (min-width: 200px) and (max-width: 767px)  {
+    
+    h1{
+        font-size: 1.1rem;
+        top: 20%;
+    }
+
+    .button{
+        width: 10rem;
+        font-size: 0.90rem;
+        top: 35%;
+    }
+
+    .button1{
+        width: 10rem;
+        font-size: 0.90rem;
+        top: 34%;
+    }
+
+    .button2{
+        width: 10rem;
+        font-size: 0.90rem;
+        top: 38%;
+    }
+
+    .button3{
+        width: 10rem;
+        font-size: 0.90rem;
+        top: 37%;
+    }
+
+    footer{
+        padding: 40px;
+    }
+
+    footer .container{
+        flex-direction: column;
+    }
+
+    footer .container .sec{
+        margin-right: 0;
+        margin-bottom: 40px;
+    }
+
+    footer .container .sec.aboutus, 
+    .contactFriends,.contactNacional {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 200px) and (max-width: 767px) and (orientation : landscape) {
+    
+    body .container{
+        height: 140%;
+    }
+    
+    h1 {
+        font-size: 1.6rem;
+        top: 10%;
+    }
+    
+    .button {
+        width: 11rem;
+        font-size: 1rem;
+        top: 25%;
+    }
+
+    .button1{
+        width: 11rem;
+        font-size: 1rem;
+        top: 24%;
+    }
+
+    .button2{
+        width: 11rem;
+        font-size: 1rem;
+        top: 28%;
+    }
+
+    .button3{
+        width: 11rem;
+        font-size: 1rem;
+        top: 27%;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px)  {
+    
+    h1{
+        font-size: 2.2rem;
+        top: 20%;
+    }
+
+    footer{
+        padding: 35px;
+    }
+
+    footer .container .sec.aboutus, 
+    .contactFriends,.contactNacional {
+        width: 100%;
+    }   
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation : landscape) {
+    
+    body .container{
+        height: 140%;
+    }
+
+    h1{
+        font-size: 2.2rem;
+        top: 20%;
+    }
+
+    footer{
+        padding: 35px;
+    }
+
+    footer .container .sec.aboutus, 
+    .contactFriends,.contactNacional {
+        width: 100%;
+    }   
+}
